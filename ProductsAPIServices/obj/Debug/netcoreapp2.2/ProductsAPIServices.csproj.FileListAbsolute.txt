@@ -1,0 +1,15 @@
+D:\projects\api-gateway\ProductsAPIServices\bin\Debug\netcoreapp2.2\appsettings.Development.json
+D:\projects\api-gateway\ProductsAPIServices\bin\Debug\netcoreapp2.2\appsettings.json
+D:\projects\api-gateway\ProductsAPIServices\bin\Debug\netcoreapp2.2\ProductsAPIServices.deps.json
+D:\projects\api-gateway\ProductsAPIServices\bin\Debug\netcoreapp2.2\ProductsAPIServices.runtimeconfig.json
+D:\projects\api-gateway\ProductsAPIServices\bin\Debug\netcoreapp2.2\ProductsAPIServices.runtimeconfig.dev.json
+D:\projects\api-gateway\ProductsAPIServices\bin\Debug\netcoreapp2.2\ProductsAPIServices.dll
+D:\projects\api-gateway\ProductsAPIServices\bin\Debug\netcoreapp2.2\ProductsAPIServices.pdb
+D:\projects\api-gateway\ProductsAPIServices\obj\Debug\netcoreapp2.2\ProductsAPIServices.csprojAssemblyReference.cache
+D:\projects\api-gateway\ProductsAPIServices\obj\Debug\netcoreapp2.2\ProductsAPIServices.RazorAssemblyInfo.cache
+D:\projects\api-gateway\ProductsAPIServices\obj\Debug\netcoreapp2.2\ProductsAPIServices.RazorAssemblyInfo.cs
+D:\projects\api-gateway\ProductsAPIServices\obj\Debug\netcoreapp2.2\ProductsAPIServices.AssemblyInfoInputs.cache
+D:\projects\api-gateway\ProductsAPIServices\obj\Debug\netcoreapp2.2\ProductsAPIServices.AssemblyInfo.cs
+D:\projects\api-gateway\ProductsAPIServices\obj\Debug\netcoreapp2.2\ProductsAPIServices.RazorTargetAssemblyInfo.cache
+D:\projects\api-gateway\ProductsAPIServices\obj\Debug\netcoreapp2.2\ProductsAPIServices.dll
+D:\projects\api-gateway\ProductsAPIServices\obj\Debug\netcoreapp2.2\ProductsAPIServices.pdb

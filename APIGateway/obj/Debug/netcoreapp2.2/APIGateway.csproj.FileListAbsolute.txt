@@ -1,0 +1,16 @@
+D:\projects\api-gateway\APIGateway\bin\Debug\netcoreapp2.2\appsettings.Development.json
+D:\projects\api-gateway\APIGateway\bin\Debug\netcoreapp2.2\appsettings.json
+D:\projects\api-gateway\APIGateway\bin\Debug\netcoreapp2.2\Ocelot.json
+D:\projects\api-gateway\APIGateway\bin\Debug\netcoreapp2.2\APIGateway.deps.json
+D:\projects\api-gateway\APIGateway\bin\Debug\netcoreapp2.2\APIGateway.runtimeconfig.json
+D:\projects\api-gateway\APIGateway\bin\Debug\netcoreapp2.2\APIGateway.runtimeconfig.dev.json
+D:\projects\api-gateway\APIGateway\bin\Debug\netcoreapp2.2\APIGateway.dll
+D:\projects\api-gateway\APIGateway\bin\Debug\netcoreapp2.2\APIGateway.pdb
+D:\projects\api-gateway\APIGateway\obj\Debug\netcoreapp2.2\APIGateway.csprojAssemblyReference.cache
+D:\projects\api-gateway\APIGateway\obj\Debug\netcoreapp2.2\APIGateway.RazorAssemblyInfo.cache
+D:\projects\api-gateway\APIGateway\obj\Debug\netcoreapp2.2\APIGateway.RazorAssemblyInfo.cs
+D:\projects\api-gateway\APIGateway\obj\Debug\netcoreapp2.2\APIGateway.AssemblyInfoInputs.cache
+D:\projects\api-gateway\APIGateway\obj\Debug\netcoreapp2.2\APIGateway.AssemblyInfo.cs
+D:\projects\api-gateway\APIGateway\obj\Debug\netcoreapp2.2\APIGateway.RazorTargetAssemblyInfo.cache
+D:\projects\api-gateway\APIGateway\obj\Debug\netcoreapp2.2\APIGateway.dll
+D:\projects\api-gateway\APIGateway\obj\Debug\netcoreapp2.2\APIGateway.pdb

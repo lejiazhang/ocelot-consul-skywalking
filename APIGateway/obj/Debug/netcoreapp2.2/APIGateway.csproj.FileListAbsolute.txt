@@ -1,6 +1,7 @@
 D:\projects\api-gateway\APIGateway\bin\Debug\netcoreapp2.2\appsettings.Development.json
 D:\projects\api-gateway\APIGateway\bin\Debug\netcoreapp2.2\appsettings.json
-D:\projects\api-gateway\APIGateway\bin\Debug\netcoreapp2.2\Ocelot.json
+D:\projects\api-gateway\APIGateway\bin\Debug\netcoreapp2.2\skywalking.json
+D:\projects\api-gateway\APIGateway\bin\Debug\netcoreapp2.2\ocelot.json
 D:\projects\api-gateway\APIGateway\bin\Debug\netcoreapp2.2\APIGateway.deps.json
 D:\projects\api-gateway\APIGateway\bin\Debug\netcoreapp2.2\APIGateway.runtimeconfig.json
 D:\projects\api-gateway\APIGateway\bin\Debug\netcoreapp2.2\APIGateway.runtimeconfig.dev.json

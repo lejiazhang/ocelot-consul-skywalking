@@ -2,6 +2,19 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v2.2": {
+      "AspectCore.Extensions.Reflection/1.2.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Reflection.Emit.Lightweight": "4.3.0",
+          "System.Threading.Tasks.Extensions": "4.4.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/AspectCore.Extensions.Reflection.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/AspectCore.Extensions.Reflection.dll": {}
+        }
+      },
       "Consul/0.7.2.6": {
         "type": "package",
         "dependencies": {
@@ -34,6 +47,66 @@
         },
         "runtime": {
           "lib/netstandard2.0/FluentValidation.dll": {}
+        }
+      },
+      "Google.Protobuf/3.6.1": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1"
+        },
+        "compile": {
+          "lib/netstandard1.0/Google.Protobuf.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/Google.Protobuf.dll": {}
+        }
+      },
+      "Grpc/1.17.0": {
+        "type": "package",
+        "dependencies": {
+          "Grpc.Core": "1.17.0"
+        }
+      },
+      "Grpc.Core/1.17.0": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1",
+          "System.Interactive.Async": "3.1.1",
+          "System.Runtime.Loader": "4.0.0",
+          "System.Threading.Thread": "4.0.0",
+          "System.Threading.ThreadPool": "4.0.10"
+        },
+        "compile": {
+          "lib/netstandard1.5/Grpc.Core.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.5/Grpc.Core.dll": {}
+        },
+        "runtimeTargets": {
+          "runtimes/linux/native/libgrpc_csharp_ext.x64.so": {
+            "assetType": "native",
+            "rid": "linux"
+          },
+          "runtimes/linux/native/libgrpc_csharp_ext.x86.so": {
+            "assetType": "native",
+            "rid": "linux"
+          },
+          "runtimes/osx/native/libgrpc_csharp_ext.x64.dylib": {
+            "assetType": "native",
+            "rid": "osx"
+          },
+          "runtimes/osx/native/libgrpc_csharp_ext.x86.dylib": {
+            "assetType": "native",
+            "rid": "osx"
+          },
+          "runtimes/win/native/grpc_csharp_ext.x64.dll": {
+            "assetType": "native",
+            "rid": "win"
+          },
+          "runtimes/win/native/grpc_csharp_ext.x86.dll": {
+            "assetType": "native",
+            "rid": "win"
+          }
         }
       },
       "Microsoft.AspNet.WebApi.Client/5.2.6": {
@@ -2807,6 +2880,19 @@
           "lib/netstandard2.0/Ocelot.dll": {}
         }
       },
+      "Ocelot.Provider.Consul/13.5.2": {
+        "type": "package",
+        "dependencies": {
+          "Consul": "0.7.2.6",
+          "Ocelot": "13.5.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/Ocelot.Provider.Consul.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Ocelot.Provider.Consul.dll": {}
+        }
+      },
       "Remotion.Linq/2.2.0": {
         "type": "package",
         "dependencies": {
@@ -3035,6 +3121,309 @@
           }
         }
       },
+      "Serilog/2.3.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.CSharp": "4.0.1",
+          "System.Collections": "4.0.11",
+          "System.Dynamic.Runtime": "4.0.11",
+          "System.Globalization": "4.0.11",
+          "System.Linq": "4.1.0",
+          "System.Reflection": "4.1.0",
+          "System.Reflection.Extensions": "4.0.1",
+          "System.Runtime": "4.1.0",
+          "System.Runtime.Extensions": "4.1.0",
+          "System.Text.RegularExpressions": "4.1.0",
+          "System.Threading": "4.0.11"
+        },
+        "compile": {
+          "lib/netstandard1.3/Serilog.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/Serilog.dll": {}
+        }
+      },
+      "Serilog.Extensions.Logging/2.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Logging": "2.0.0",
+          "Serilog": "2.3.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Serilog.Extensions.Logging.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Serilog.Extensions.Logging.dll": {}
+        }
+      },
+      "Serilog.Sinks.File/3.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Serilog": "2.3.0",
+          "System.IO": "4.1.0",
+          "System.IO.FileSystem": "4.0.1",
+          "System.IO.FileSystem.Primitives": "4.0.1",
+          "System.Text.Encoding.Extensions": "4.0.11",
+          "System.Threading": "4.0.11",
+          "System.Threading.Timer": "4.0.1"
+        },
+        "compile": {
+          "lib/netstandard1.3/Serilog.Sinks.File.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/Serilog.Sinks.File.dll": {}
+        }
+      },
+      "Serilog.Sinks.RollingFile/3.3.0": {
+        "type": "package",
+        "dependencies": {
+          "Serilog.Sinks.File": "3.2.0",
+          "System.IO": "4.1.0",
+          "System.IO.FileSystem.Primitives": "4.0.1",
+          "System.Runtime.InteropServices": "4.1.0",
+          "System.Text.Encoding.Extensions": "4.0.11"
+        },
+        "compile": {
+          "lib/netstandard1.3/Serilog.Sinks.RollingFile.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/Serilog.Sinks.RollingFile.dll": {}
+        }
+      },
+      "SkyAPM.Abstractions/0.9.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/SkyAPM.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/SkyAPM.Abstractions.dll": {}
+        }
+      },
+      "SkyAPM.Agent.AspNetCore/0.9.0": {
+        "type": "package",
+        "dependencies": {
+          "SkyAPM.Abstractions": "0.9.0",
+          "SkyAPM.Core": "0.9.0",
+          "SkyAPM.Diagnostics.AspNetCore": "0.9.0",
+          "SkyAPM.Diagnostics.EntityFrameworkCore": "0.9.0",
+          "SkyAPM.Diagnostics.EntityFrameworkCore.Npgsql": "0.9.0",
+          "SkyAPM.Diagnostics.EntityFrameworkCore.Pomelo.MySql": "0.9.0",
+          "SkyAPM.Diagnostics.EntityFrameworkCore.Sqlite": "0.9.0",
+          "SkyAPM.Diagnostics.HttpClient": "0.9.0",
+          "SkyAPM.Diagnostics.SmartSql": "0.9.0",
+          "SkyAPM.Diagnostics.SqlClient": "0.9.0",
+          "SkyAPM.Transport.Grpc": "0.9.0",
+          "SkyAPM.Utilities.Configuration": "0.9.0",
+          "SkyAPM.Utilities.DependencyInjection": "0.9.0",
+          "SkyAPM.Utilities.Logging": "0.9.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/SkyAPM.Agent.AspNetCore.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/SkyAPM.Agent.AspNetCore.dll": {}
+        }
+      },
+      "SkyAPM.Core/0.9.0": {
+        "type": "package",
+        "dependencies": {
+          "AspectCore.Extensions.Reflection": "1.2.0",
+          "SkyAPM.Abstractions": "0.9.0",
+          "System.Diagnostics.DiagnosticSource": "4.5.1",
+          "System.Memory": "4.5.2",
+          "System.ValueTuple": "4.5.0"
+        },
+        "compile": {
+          "lib/netcoreapp2.1/SkyAPM.Core.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.1/SkyAPM.Core.dll": {}
+        }
+      },
+      "SkyAPM.Diagnostics.AspNetCore/0.9.0": {
+        "type": "package",
+        "dependencies": {
+          "SkyAPM.Abstractions": "0.9.0",
+          "SkyAPM.Utilities.DependencyInjection": "0.9.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/SkyAPM.Diagnostics.AspNetCore.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/SkyAPM.Diagnostics.AspNetCore.dll": {}
+        }
+      },
+      "SkyAPM.Diagnostics.EntityFrameworkCore/0.9.0": {
+        "type": "package",
+        "dependencies": {
+          "SkyAPM.Abstractions": "0.9.0",
+          "SkyAPM.Core": "0.9.0",
+          "SkyAPM.Utilities.DependencyInjection": "0.9.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/SkyAPM.Diagnostics.EntityFrameworkCore.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/SkyAPM.Diagnostics.EntityFrameworkCore.dll": {}
+        }
+      },
+      "SkyAPM.Diagnostics.EntityFrameworkCore.Npgsql/0.9.0": {
+        "type": "package",
+        "dependencies": {
+          "SkyAPM.Abstractions": "0.9.0",
+          "SkyAPM.Core": "0.9.0",
+          "SkyAPM.Diagnostics.EntityFrameworkCore": "0.9.0",
+          "SkyAPM.Utilities.DependencyInjection": "0.9.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/SkyAPM.Diagnostics.EntityFrameworkCore.Npgsql.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/SkyAPM.Diagnostics.EntityFrameworkCore.Npgsql.dll": {}
+        }
+      },
+      "SkyAPM.Diagnostics.EntityFrameworkCore.Pomelo.MySql/0.9.0": {
+        "type": "package",
+        "dependencies": {
+          "SkyAPM.Abstractions": "0.9.0",
+          "SkyAPM.Core": "0.9.0",
+          "SkyAPM.Diagnostics.EntityFrameworkCore": "0.9.0",
+          "SkyAPM.Utilities.DependencyInjection": "0.9.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/SkyAPM.Diagnostics.EntityFrameworkCore.Pomelo.MySql.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/SkyAPM.Diagnostics.EntityFrameworkCore.Pomelo.MySql.dll": {}
+        }
+      },
+      "SkyAPM.Diagnostics.EntityFrameworkCore.Sqlite/0.9.0": {
+        "type": "package",
+        "dependencies": {
+          "SkyAPM.Abstractions": "0.9.0",
+          "SkyAPM.Core": "0.9.0",
+          "SkyAPM.Diagnostics.EntityFrameworkCore": "0.9.0",
+          "SkyAPM.Utilities.DependencyInjection": "0.9.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/SkyAPM.Diagnostics.EntityFrameworkCore.Sqlite.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/SkyAPM.Diagnostics.EntityFrameworkCore.Sqlite.dll": {}
+        }
+      },
+      "SkyAPM.Diagnostics.HttpClient/0.9.0": {
+        "type": "package",
+        "dependencies": {
+          "SkyAPM.Abstractions": "0.9.0",
+          "SkyAPM.Core": "0.9.0",
+          "SkyAPM.Utilities.DependencyInjection": "0.9.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/SkyAPM.Diagnostics.HttpClient.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/SkyAPM.Diagnostics.HttpClient.dll": {}
+        }
+      },
+      "SkyAPM.Diagnostics.SmartSql/0.9.0": {
+        "type": "package",
+        "dependencies": {
+          "SkyAPM.Abstractions": "0.9.0",
+          "SkyAPM.Core": "0.9.0",
+          "SkyAPM.Utilities.DependencyInjection": "0.9.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/SkyAPM.Diagnostics.SmartSql.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/SkyAPM.Diagnostics.SmartSql.dll": {}
+        }
+      },
+      "SkyAPM.Diagnostics.SqlClient/0.9.0": {
+        "type": "package",
+        "dependencies": {
+          "SkyAPM.Abstractions": "0.9.0",
+          "SkyAPM.Core": "0.9.0",
+          "SkyAPM.Utilities.DependencyInjection": "0.9.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/SkyAPM.Diagnostics.SqlClient.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/SkyAPM.Diagnostics.SqlClient.dll": {}
+        }
+      },
+      "SkyAPM.Transport.Grpc/0.9.0": {
+        "type": "package",
+        "dependencies": {
+          "SkyAPM.Abstractions": "0.9.0",
+          "SkyAPM.Transport.Grpc.Protocol": "0.9.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/SkyAPM.Transport.Grpc.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/SkyAPM.Transport.Grpc.dll": {}
+        }
+      },
+      "SkyAPM.Transport.Grpc.Protocol/0.9.0": {
+        "type": "package",
+        "dependencies": {
+          "Google.Protobuf": "3.6.1",
+          "Grpc": "1.17.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/SkyAPM.Transport.Grpc.Protocol.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/SkyAPM.Transport.Grpc.Protocol.dll": {}
+        }
+      },
+      "SkyAPM.Utilities.Configuration/0.9.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "2.0.0",
+          "Microsoft.Extensions.Configuration.Binder": "2.0.0",
+          "Microsoft.Extensions.Configuration.EnvironmentVariables": "2.0.0",
+          "Microsoft.Extensions.Configuration.Json": "2.0.0",
+          "SkyAPM.Abstractions": "0.9.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/SkyAPM.Utilities.Configuration.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/SkyAPM.Utilities.Configuration.dll": {}
+        }
+      },
+      "SkyAPM.Utilities.DependencyInjection/0.9.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "2.0.0",
+          "SkyAPM.Core": "0.9.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/SkyAPM.Utilities.DependencyInjection.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/SkyAPM.Utilities.DependencyInjection.dll": {}
+        }
+      },
+      "SkyAPM.Utilities.Logging/0.9.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Logging": "2.0.0",
+          "Serilog.Extensions.Logging": "2.0.2",
+          "Serilog.Sinks.RollingFile": "3.3.0",
+          "SkyAPM.Abstractions": "0.9.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/SkyAPM.Utilities.Logging.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/SkyAPM.Utilities.Logging.dll": {}
+        }
+      },
       "System.AppContext/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -3202,7 +3591,7 @@
           "ref/netstandard1.3/System.Diagnostics.Debug.dll": {}
         }
       },
-      "System.Diagnostics.DiagnosticSource/4.5.0": {
+      "System.Diagnostics.DiagnosticSource/4.5.1": {
         "type": "package",
         "compile": {
           "lib/netstandard1.3/System.Diagnostics.DiagnosticSource.dll": {}
@@ -3516,7 +3905,7 @@
           "lib/netstandard1.3/System.Linq.Queryable.dll": {}
         }
       },
-      "System.Memory/4.5.1": {
+      "System.Memory/4.5.2": {
         "type": "package",
         "compile": {
           "ref/netcoreapp2.1/_._": {}
@@ -3740,7 +4129,7 @@
           "System.Runtime": "4.3.0"
         },
         "compile": {
-          "ref/netstandard1.0/_._": {}
+          "ref/netstandard1.0/System.Reflection.Emit.Lightweight.dll": {}
         },
         "runtime": {
           "lib/netstandard1.3/System.Reflection.Emit.Lightweight.dll": {}
@@ -3885,6 +4274,20 @@
             "assetType": "runtime",
             "rid": "win"
           }
+        }
+      },
+      "System.Runtime.Loader/4.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.IO": "4.1.0",
+          "System.Reflection": "4.1.0",
+          "System.Runtime": "4.1.0"
+        },
+        "compile": {
+          "ref/netstandard1.5/System.Runtime.Loader.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.5/System.Runtime.Loader.dll": {}
         }
       },
       "System.Runtime.Numerics/4.3.0": {
@@ -4385,18 +4788,37 @@
           "lib/netstandard1.3/System.Threading.Thread.dll": {}
         }
       },
-      "System.ValueTuple/4.3.0": {
+      "System.Threading.ThreadPool/4.0.10": {
         "type": "package",
         "dependencies": {
-          "System.Collections": "4.3.0",
-          "System.Resources.ResourceManager": "4.3.0",
-          "System.Runtime": "4.3.0"
+          "System.Runtime": "4.1.0",
+          "System.Runtime.Handles": "4.0.1"
         },
         "compile": {
-          "lib/netstandard1.0/System.ValueTuple.dll": {}
+          "ref/netstandard1.3/System.Threading.ThreadPool.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.0/System.ValueTuple.dll": {}
+          "lib/netstandard1.3/System.Threading.ThreadPool.dll": {}
+        }
+      },
+      "System.Threading.Timer/4.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.0.1",
+          "Microsoft.NETCore.Targets": "1.0.1",
+          "System.Runtime": "4.1.0"
+        },
+        "compile": {
+          "ref/netstandard1.2/System.Threading.Timer.dll": {}
+        }
+      },
+      "System.ValueTuple/4.5.0": {
+        "type": "package",
+        "compile": {
+          "ref/netcoreapp2.0/_._": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.0/_._": {}
         }
       },
       "System.Xml.ReaderWriter/4.3.0": {
@@ -4540,6 +4962,19 @@
     }
   },
   "libraries": {
+    "AspectCore.Extensions.Reflection/1.2.0": {
+      "sha512": "+9Ebk4YNMIueiJGhFbrfF8Zr9XY462lRaw6IgYgtfxSopoZSMRlksPnCIxWGoXBijuMeUjRbnULWaTwuZXZLgw==",
+      "type": "package",
+      "path": "aspectcore.extensions.reflection/1.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "aspectcore.extensions.reflection.1.2.0.nupkg.sha512",
+        "aspectcore.extensions.reflection.nuspec",
+        "lib/net45/AspectCore.Extensions.Reflection.dll",
+        "lib/netstandard2.0/AspectCore.Extensions.Reflection.dll"
+      ]
+    },
     "Consul/0.7.2.6": {
       "sha512": "0inTc+PLbk/TELmdO12q5N/4lZ2kn5w2EmOqG0g686JXgr1OKEGPCuGZxWYE+NuROy7dwX/FBxKUTph7vuyjPA==",
       "type": "package",
@@ -4570,6 +5005,63 @@
         "lib/netstandard1.6/FluentValidation.xml",
         "lib/netstandard2.0/FluentValidation.dll",
         "lib/netstandard2.0/FluentValidation.xml"
+      ]
+    },
+    "Google.Protobuf/3.6.1": {
+      "sha512": "741fGeDQjixBJaU2j+0CbrmZXsNJkTn/hWbOh4fLVXndHsCclJmWznCPWrJmPoZKvajBvAz3e8ECJOUvRtwjNQ==",
+      "type": "package",
+      "path": "google.protobuf/3.6.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "google.protobuf.3.6.1.nupkg.sha512",
+        "google.protobuf.nuspec",
+        "lib/net45/Google.Protobuf.dll",
+        "lib/net45/Google.Protobuf.xml",
+        "lib/netstandard1.0/Google.Protobuf.dll",
+        "lib/netstandard1.0/Google.Protobuf.xml"
+      ]
+    },
+    "Grpc/1.17.0": {
+      "sha512": "SIhdyN4hYAw4itQ3uYkQIDAKXxw23jmxrivTVs4yG6nEZM24gUua5b5PhyzkuF/WwUu2qKIba3+HkFZ5cbC8Hw==",
+      "type": "package",
+      "path": "grpc/1.17.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "grpc.1.17.0.nupkg.sha512",
+        "grpc.nuspec"
+      ]
+    },
+    "Grpc.Core/1.17.0": {
+      "sha512": "qX9zcr+1f8s2aEf7S+iqmaXbf5HN8OfktrQUucvCksSeLUmxyi4kw9+B86Ep7VkZz/2VyovYfkBOhHdWKU49Cg==",
+      "type": "package",
+      "path": "grpc.core/1.17.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/MonoAndroid10/Grpc.Core.targets",
+        "build/Xamarin.iOS10/Grpc.Core.targets",
+        "build/net45/Grpc.Core.targets",
+        "grpc.core.1.17.0.nupkg.sha512",
+        "grpc.core.nuspec",
+        "lib/net45/Grpc.Core.dll",
+        "lib/net45/Grpc.Core.pdb",
+        "lib/net45/Grpc.Core.xml",
+        "lib/netstandard1.5/Grpc.Core.dll",
+        "lib/netstandard1.5/Grpc.Core.pdb",
+        "lib/netstandard1.5/Grpc.Core.xml",
+        "native/android/arm64-v8a/libgrpc_csharp_ext.so",
+        "native/android/armeabi-v7a/libgrpc_csharp_ext.so",
+        "native/android/x86/libgrpc_csharp_ext.so",
+        "native/ios/universal/libgrpc.a",
+        "native/ios/universal/libgrpc_csharp_ext.a",
+        "runtimes/linux/native/libgrpc_csharp_ext.x64.so",
+        "runtimes/linux/native/libgrpc_csharp_ext.x86.so",
+        "runtimes/osx/native/libgrpc_csharp_ext.x64.dylib",
+        "runtimes/osx/native/libgrpc_csharp_ext.x86.dylib",
+        "runtimes/win/native/grpc_csharp_ext.x64.dll",
+        "runtimes/win/native/grpc_csharp_ext.x86.dll"
       ]
     },
     "Microsoft.AspNet.WebApi.Client/5.2.6": {
@@ -7562,6 +8054,18 @@
         "ocelot.nuspec"
       ]
     },
+    "Ocelot.Provider.Consul/13.5.2": {
+      "sha512": "VdgHqNkZRjdI+MlFgsmtM1Vu850r6NLB1oVpLkPbhbJMUSH0kiJxk516aVCa/QkYZAGoPeeudfPRieDhtzB/Hw==",
+      "type": "package",
+      "path": "ocelot.provider.consul/13.5.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Ocelot.Provider.Consul.dll",
+        "ocelot.provider.consul.13.5.2.nupkg.sha512",
+        "ocelot.provider.consul.nuspec"
+      ]
+    },
     "Remotion.Linq/2.2.0": {
       "sha512": "fK/76UmpC0FXBlGDFVPLJHQlDLYnGC+XY3eoDgCgbtrhi0vzbXDQ3n/IYHhqSKqXQfGw/u04A1drWs7rFVkRjw==",
       "type": "package",
@@ -7868,6 +8372,286 @@
         "runtimes/win-x86/native/sni.dll",
         "useSharedDesignerContext.txt",
         "version.txt"
+      ]
+    },
+    "Serilog/2.3.0": {
+      "sha512": "JJMEqTUGe/bA4OEMefGd8W6si9oStSa3CF47dIHzkRKJHqFWFOW8D2aZTOW6VIgNLY2hzruQXhvp2tX0NVkgsw==",
+      "type": "package",
+      "path": "serilog/2.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/Serilog.dll",
+        "lib/net45/Serilog.xml",
+        "lib/net46/Serilog.dll",
+        "lib/net46/Serilog.xml",
+        "lib/netstandard1.0/Serilog.dll",
+        "lib/netstandard1.0/Serilog.xml",
+        "lib/netstandard1.3/Serilog.dll",
+        "lib/netstandard1.3/Serilog.xml",
+        "serilog.2.3.0.nupkg.sha512",
+        "serilog.nuspec"
+      ]
+    },
+    "Serilog.Extensions.Logging/2.0.2": {
+      "sha512": "PYAkzUn/VV16Es7U06BfEhNZEltnYWu0WFCM4d2lLY/dvlA7xMwFXBuGRxR0XvEBPoOxPorjhFLy9txwiMO6rg==",
+      "type": "package",
+      "path": "serilog.extensions.logging/2.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/Serilog.Extensions.Logging.dll",
+        "lib/net45/Serilog.Extensions.Logging.xml",
+        "lib/net46/Serilog.Extensions.Logging.dll",
+        "lib/net46/Serilog.Extensions.Logging.xml",
+        "lib/net461/Serilog.Extensions.Logging.dll",
+        "lib/net461/Serilog.Extensions.Logging.xml",
+        "lib/netstandard1.3/Serilog.Extensions.Logging.dll",
+        "lib/netstandard1.3/Serilog.Extensions.Logging.xml",
+        "lib/netstandard2.0/Serilog.Extensions.Logging.dll",
+        "lib/netstandard2.0/Serilog.Extensions.Logging.xml",
+        "serilog.extensions.logging.2.0.2.nupkg.sha512",
+        "serilog.extensions.logging.nuspec"
+      ]
+    },
+    "Serilog.Sinks.File/3.2.0": {
+      "sha512": "VHbo68pMg5hwSWrzLEdZv5b/rYmIgHIRhd4d5rl8GnC5/a8Fr+RShT5kWyeJOXax1el6mNJ+dmHDOVgnNUQxaw==",
+      "type": "package",
+      "path": "serilog.sinks.file/3.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/Serilog.Sinks.File.dll",
+        "lib/net45/Serilog.Sinks.File.xml",
+        "lib/netstandard1.3/Serilog.Sinks.File.dll",
+        "lib/netstandard1.3/Serilog.Sinks.File.xml",
+        "serilog.sinks.file.3.2.0.nupkg.sha512",
+        "serilog.sinks.file.nuspec"
+      ]
+    },
+    "Serilog.Sinks.RollingFile/3.3.0": {
+      "sha512": "2lT5X1r3GH4P0bRWJfhA7etGl8Q2Ipw9AACvtAHWRUSpYZ42NGVyHoVs2ALBZ/cAkkS+tA4jl80Zie144eLQPg==",
+      "type": "package",
+      "path": "serilog.sinks.rollingfile/3.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/Serilog.Sinks.RollingFile.dll",
+        "lib/net45/Serilog.Sinks.RollingFile.xml",
+        "lib/netstandard1.3/Serilog.Sinks.RollingFile.dll",
+        "lib/netstandard1.3/Serilog.Sinks.RollingFile.xml",
+        "serilog.sinks.rollingfile.3.3.0.nupkg.sha512",
+        "serilog.sinks.rollingfile.nuspec"
+      ]
+    },
+    "SkyAPM.Abstractions/0.9.0": {
+      "sha512": "DlDOg1CNcGnEawNa9ZPR5LbVl6q0v5nbZtInFMnqLeddB+n2LhdxxcPvT2fAYiXtK4Klq4j+SYG6hkPuxYuAfQ==",
+      "type": "package",
+      "path": "skyapm.abstractions/0.9.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/SkyAPM.Abstractions.dll",
+        "lib/netstandard2.0/SkyAPM.Abstractions.xml",
+        "skyapm.abstractions.0.9.0.nupkg.sha512",
+        "skyapm.abstractions.nuspec"
+      ]
+    },
+    "SkyAPM.Agent.AspNetCore/0.9.0": {
+      "sha512": "u6UMl7zbrjBKl7aOzBhhg5vt7vdoR8mSb66g47c5eJ9Xk8+16WeX2aFROQCxtftvyzsyrl11NeN2fz3J34rDJg==",
+      "type": "package",
+      "path": "skyapm.agent.aspnetcore/0.9.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/SkyAPM.Agent.AspNetCore.dll",
+        "lib/netstandard2.0/SkyAPM.Agent.AspNetCore.xml",
+        "skyapm.agent.aspnetcore.0.9.0.nupkg.sha512",
+        "skyapm.agent.aspnetcore.nuspec"
+      ]
+    },
+    "SkyAPM.Core/0.9.0": {
+      "sha512": "SBdOy2eCt38xti7QQtwh5MXbdCBnEhXn654sJ9QwKC/MjJG16BVB2Z9wVRUOZ0dVq5He2gThLq0EN358RnQKcQ==",
+      "type": "package",
+      "path": "skyapm.core/0.9.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netcoreapp2.1/SkyAPM.Core.dll",
+        "lib/netcoreapp2.1/SkyAPM.Core.xml",
+        "lib/netstandard2.0/SkyAPM.Core.dll",
+        "lib/netstandard2.0/SkyAPM.Core.xml",
+        "skyapm.core.0.9.0.nupkg.sha512",
+        "skyapm.core.nuspec"
+      ]
+    },
+    "SkyAPM.Diagnostics.AspNetCore/0.9.0": {
+      "sha512": "AAPnf0/UwcdQavgtxzvnOGdAHPF0wn85eslVLXXukjsmf9tRBZKZB28nD/OZaajruDa6hwB7sgiiyve8OSp9tQ==",
+      "type": "package",
+      "path": "skyapm.diagnostics.aspnetcore/0.9.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/SkyAPM.Diagnostics.AspNetCore.dll",
+        "lib/netstandard2.0/SkyAPM.Diagnostics.AspNetCore.xml",
+        "skyapm.diagnostics.aspnetcore.0.9.0.nupkg.sha512",
+        "skyapm.diagnostics.aspnetcore.nuspec"
+      ]
+    },
+    "SkyAPM.Diagnostics.EntityFrameworkCore/0.9.0": {
+      "sha512": "fSVnEjGK3uq6wTqxwJYC1IcdwZGqw4+o3E/NtWhm3aqCSkGIzLrq5xRmzyFH1JcN6CET+bKZOUuZ6Vtsh4jb1w==",
+      "type": "package",
+      "path": "skyapm.diagnostics.entityframeworkcore/0.9.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/SkyAPM.Diagnostics.EntityFrameworkCore.dll",
+        "lib/netstandard2.0/SkyAPM.Diagnostics.EntityFrameworkCore.xml",
+        "skyapm.diagnostics.entityframeworkcore.0.9.0.nupkg.sha512",
+        "skyapm.diagnostics.entityframeworkcore.nuspec"
+      ]
+    },
+    "SkyAPM.Diagnostics.EntityFrameworkCore.Npgsql/0.9.0": {
+      "sha512": "T/3SBhKZpXGYqujktN5jD+RiYPRxtubLcySZX/+jXI3EozH4XDUIq0/VyJ+5HPNERFt54jjj8uGZ90XaWvwf5A==",
+      "type": "package",
+      "path": "skyapm.diagnostics.entityframeworkcore.npgsql/0.9.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/SkyAPM.Diagnostics.EntityFrameworkCore.Npgsql.dll",
+        "lib/netstandard2.0/SkyAPM.Diagnostics.EntityFrameworkCore.Npgsql.xml",
+        "skyapm.diagnostics.entityframeworkcore.npgsql.0.9.0.nupkg.sha512",
+        "skyapm.diagnostics.entityframeworkcore.npgsql.nuspec"
+      ]
+    },
+    "SkyAPM.Diagnostics.EntityFrameworkCore.Pomelo.MySql/0.9.0": {
+      "sha512": "5sEP5O1yAsu4eP/Zy4R+a+GU+ykdB7INNYZhGMGnlrp/SneYSENS9nfv0WeTeW9d4PUWyJCg9h+iv3M4g/HvNg==",
+      "type": "package",
+      "path": "skyapm.diagnostics.entityframeworkcore.pomelo.mysql/0.9.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/SkyAPM.Diagnostics.EntityFrameworkCore.Pomelo.MySql.dll",
+        "lib/netstandard2.0/SkyAPM.Diagnostics.EntityFrameworkCore.Pomelo.MySql.xml",
+        "skyapm.diagnostics.entityframeworkcore.pomelo.mysql.0.9.0.nupkg.sha512",
+        "skyapm.diagnostics.entityframeworkcore.pomelo.mysql.nuspec"
+      ]
+    },
+    "SkyAPM.Diagnostics.EntityFrameworkCore.Sqlite/0.9.0": {
+      "sha512": "9O1r2ozYThPhSm6e+iFVfdIti0ZmjbxEG8uyL+wU+393Yp0sEn4di2yknNZc94J5shVsXw5ukD/0mQ9Xdmf/uw==",
+      "type": "package",
+      "path": "skyapm.diagnostics.entityframeworkcore.sqlite/0.9.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/SkyAPM.Diagnostics.EntityFrameworkCore.Sqlite.dll",
+        "lib/netstandard2.0/SkyAPM.Diagnostics.EntityFrameworkCore.Sqlite.xml",
+        "skyapm.diagnostics.entityframeworkcore.sqlite.0.9.0.nupkg.sha512",
+        "skyapm.diagnostics.entityframeworkcore.sqlite.nuspec"
+      ]
+    },
+    "SkyAPM.Diagnostics.HttpClient/0.9.0": {
+      "sha512": "Pt4Spf1OIBHSY8R0Qf7InRjidqLXzI86oG8OkF1aQnKBpUhh3FMizYueYLZNUsukFLDDWaBScOZaOtrH9EpctQ==",
+      "type": "package",
+      "path": "skyapm.diagnostics.httpclient/0.9.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/SkyAPM.Diagnostics.HttpClient.dll",
+        "lib/netstandard2.0/SkyAPM.Diagnostics.HttpClient.xml",
+        "skyapm.diagnostics.httpclient.0.9.0.nupkg.sha512",
+        "skyapm.diagnostics.httpclient.nuspec"
+      ]
+    },
+    "SkyAPM.Diagnostics.SmartSql/0.9.0": {
+      "sha512": "j0TkSRKevCJpCg3nxnNRByZUuK+kXIMr6GPgMHuceUdM2dwtovogASf0IyYF1dkcX1FEnCSyhOoebm8ekiy5bQ==",
+      "type": "package",
+      "path": "skyapm.diagnostics.smartsql/0.9.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/SkyAPM.Diagnostics.SmartSql.dll",
+        "lib/netstandard2.0/SkyAPM.Diagnostics.SmartSql.xml",
+        "skyapm.diagnostics.smartsql.0.9.0.nupkg.sha512",
+        "skyapm.diagnostics.smartsql.nuspec"
+      ]
+    },
+    "SkyAPM.Diagnostics.SqlClient/0.9.0": {
+      "sha512": "RhsQXbdUnEMv9ytxgUIoLkPshHeFByBRx/RTw9MxsF0TdT4F7yXOaQjnMoDmf0f9JngNw3lmRX85wak+CXHXcQ==",
+      "type": "package",
+      "path": "skyapm.diagnostics.sqlclient/0.9.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/SkyAPM.Diagnostics.SqlClient.dll",
+        "lib/netstandard2.0/SkyAPM.Diagnostics.SqlClient.xml",
+        "skyapm.diagnostics.sqlclient.0.9.0.nupkg.sha512",
+        "skyapm.diagnostics.sqlclient.nuspec"
+      ]
+    },
+    "SkyAPM.Transport.Grpc/0.9.0": {
+      "sha512": "EJzbwVtAUqxUc6yjKoHcWVaozFMj/YicaWHIzVmKwEZ6JXLIBQiUiPYTRPgti94dn8t9Tx8UClS6WutKNA70vA==",
+      "type": "package",
+      "path": "skyapm.transport.grpc/0.9.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/SkyAPM.Transport.Grpc.dll",
+        "lib/netstandard2.0/SkyAPM.Transport.Grpc.xml",
+        "skyapm.transport.grpc.0.9.0.nupkg.sha512",
+        "skyapm.transport.grpc.nuspec"
+      ]
+    },
+    "SkyAPM.Transport.Grpc.Protocol/0.9.0": {
+      "sha512": "gpmSiMLqX+fmrCRrvoDRxWjJRrcwe3hHpM/plBjv+fVD+vCFVCoxrxkOAF9u/mT0bHTtGFAbc/W5ztQ9/ZDg+Q==",
+      "type": "package",
+      "path": "skyapm.transport.grpc.protocol/0.9.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/SkyAPM.Transport.Grpc.Protocol.dll",
+        "lib/netstandard2.0/SkyAPM.Transport.Grpc.Protocol.xml",
+        "skyapm.transport.grpc.protocol.0.9.0.nupkg.sha512",
+        "skyapm.transport.grpc.protocol.nuspec"
+      ]
+    },
+    "SkyAPM.Utilities.Configuration/0.9.0": {
+      "sha512": "sKFE46QAyk0EwKlCJZSyA+Q43ZUgE8q394mSgoafe3We54thnAgSG485dxoU5Yozu2HlW/bOTbaChr1Y4BJC7g==",
+      "type": "package",
+      "path": "skyapm.utilities.configuration/0.9.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/SkyAPM.Utilities.Configuration.dll",
+        "lib/netstandard2.0/SkyAPM.Utilities.Configuration.xml",
+        "skyapm.utilities.configuration.0.9.0.nupkg.sha512",
+        "skyapm.utilities.configuration.nuspec"
+      ]
+    },
+    "SkyAPM.Utilities.DependencyInjection/0.9.0": {
+      "sha512": "RB9Np7t/tMOKwpdXDlki7w0UjnYXPFg5K8wWfHsAJOjoz2A1K4hvYeC2Eye5zhJtJ1mYOWMUigvCjYAt/AsUCQ==",
+      "type": "package",
+      "path": "skyapm.utilities.dependencyinjection/0.9.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/SkyAPM.Utilities.DependencyInjection.dll",
+        "lib/netstandard2.0/SkyAPM.Utilities.DependencyInjection.xml",
+        "skyapm.utilities.dependencyinjection.0.9.0.nupkg.sha512",
+        "skyapm.utilities.dependencyinjection.nuspec"
+      ]
+    },
+    "SkyAPM.Utilities.Logging/0.9.0": {
+      "sha512": "DSLpJoNMuiRy6doOTJQQ0iCS2gl+EygeA3RO/0F2fv09+j1RKlSu2VHck9fU7XXaa4uOx5vrTDwTCr6cuurVlw==",
+      "type": "package",
+      "path": "skyapm.utilities.logging/0.9.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/SkyAPM.Utilities.Logging.dll",
+        "lib/netstandard2.0/SkyAPM.Utilities.Logging.xml",
+        "skyapm.utilities.logging.0.9.0.nupkg.sha512",
+        "skyapm.utilities.logging.nuspec"
       ]
     },
     "System.AppContext/4.3.0": {
@@ -8520,10 +9304,10 @@
         "system.diagnostics.debug.nuspec"
       ]
     },
-    "System.Diagnostics.DiagnosticSource/4.5.0": {
-      "sha512": "eIHRELiYDQvsMToML81QFkXEEYXUSUT2F28t1SGrevWqP+epFdw80SyAXIKTXOHrIEXReFOEnEr7XlGiC2GgOg==",
+    "System.Diagnostics.DiagnosticSource/4.5.1": {
+      "sha512": "zCno/m44ymWhgLFh7tELDG9587q0l/EynPM0m4KgLaWQbz/TEKvNRX2YT5ip2qXW/uayifQ2ZqbnErsKJ4lYrQ==",
       "type": "package",
-      "path": "system.diagnostics.diagnosticsource/4.5.0",
+      "path": "system.diagnostics.diagnosticsource/4.5.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -8539,7 +9323,7 @@
         "lib/netstandard1.3/System.Diagnostics.DiagnosticSource.xml",
         "lib/portable-net45+win8+wpa81/System.Diagnostics.DiagnosticSource.dll",
         "lib/portable-net45+win8+wpa81/System.Diagnostics.DiagnosticSource.xml",
-        "system.diagnostics.diagnosticsource.4.5.0.nupkg.sha512",
+        "system.diagnostics.diagnosticsource.4.5.1.nupkg.sha512",
         "system.diagnostics.diagnosticsource.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
@@ -9505,10 +10289,10 @@
         "system.linq.queryable.nuspec"
       ]
     },
-    "System.Memory/4.5.1": {
-      "sha512": "sDJYJpGtTgx+23Ayu5euxG5mAXWdkDb4+b0rD0Cab0M1oQS9H0HXGPriKcqpXuiJDTV7fTp/d+fMDJmnr6sNvA==",
+    "System.Memory/4.5.2": {
+      "sha512": "fvq1GNmUFwbKv+aLVYYdgu/+gc8Nu9oFujOxIjPrsf+meis9JBzTPDL6aP/eeGOz9yPj6rRLUbOjKMpsMEWpNg==",
       "type": "package",
-      "path": "system.memory/4.5.1",
+      "path": "system.memory/4.5.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -9520,11 +10304,7 @@
         "lib/netstandard2.0/System.Memory.dll",
         "lib/netstandard2.0/System.Memory.xml",
         "ref/netcoreapp2.1/_._",
-        "ref/netstandard1.1/System.Memory.dll",
-        "ref/netstandard1.1/System.Memory.xml",
-        "ref/netstandard2.0/System.Memory.dll",
-        "ref/netstandard2.0/System.Memory.xml",
-        "system.memory.4.5.1.nupkg.sha512",
+        "system.memory.4.5.2.nupkg.sha512",
         "system.memory.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
@@ -10686,6 +11466,32 @@
         "runtimes/win/lib/netstandard1.1/System.Runtime.InteropServices.RuntimeInformation.dll",
         "system.runtime.interopservices.runtimeinformation.4.3.0.nupkg.sha512",
         "system.runtime.interopservices.runtimeinformation.nuspec"
+      ]
+    },
+    "System.Runtime.Loader/4.0.0": {
+      "sha512": "4UN78GOVU/mbDFcXkEWtetJT/sJ0yic2gGk1HSlSpWI0TDf421xnrZTDZnwNBapk1GQeYN7U1lTj/aQB1by6ow==",
+      "type": "package",
+      "path": "system.runtime.loader/4.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/net462/_._",
+        "lib/netstandard1.5/System.Runtime.Loader.dll",
+        "ref/netstandard1.5/System.Runtime.Loader.dll",
+        "ref/netstandard1.5/System.Runtime.Loader.xml",
+        "ref/netstandard1.5/de/System.Runtime.Loader.xml",
+        "ref/netstandard1.5/es/System.Runtime.Loader.xml",
+        "ref/netstandard1.5/fr/System.Runtime.Loader.xml",
+        "ref/netstandard1.5/it/System.Runtime.Loader.xml",
+        "ref/netstandard1.5/ja/System.Runtime.Loader.xml",
+        "ref/netstandard1.5/ko/System.Runtime.Loader.xml",
+        "ref/netstandard1.5/ru/System.Runtime.Loader.xml",
+        "ref/netstandard1.5/zh-hans/System.Runtime.Loader.xml",
+        "ref/netstandard1.5/zh-hant/System.Runtime.Loader.xml",
+        "system.runtime.loader.4.0.0.nupkg.sha512",
+        "system.runtime.loader.nuspec"
       ]
     },
     "System.Runtime.Numerics/4.3.0": {
@@ -12009,21 +12815,142 @@
         "system.threading.thread.nuspec"
       ]
     },
-    "System.ValueTuple/4.3.0": {
-      "sha512": "cNLEvBX3d6MMQRZe3SMFNukVbitDAEpVZO17qa0/2FHxZ7Y7PpFRpr6m2615XYM/tYYYf0B+WyHNujqIw8Luwg==",
+    "System.Threading.ThreadPool/4.0.10": {
+      "sha512": "IMXgB5Vf/5Qw1kpoVgJMOvUO1l32aC+qC3OaIZjWJOjvcxuxNWOK2ZTWWYXfij22NHxT2j1yWX5vlAeQWld9vA==",
       "type": "package",
-      "path": "system.valuetuple/4.3.0",
+      "path": "system.threading.threadpool/4.0.10",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
-        "lib/netstandard1.0/.xml",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net46/System.Threading.ThreadPool.dll",
+        "lib/netcore50/_._",
+        "lib/netstandard1.3/System.Threading.ThreadPool.dll",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net46/System.Threading.ThreadPool.dll",
+        "ref/netstandard1.3/System.Threading.ThreadPool.dll",
+        "ref/netstandard1.3/System.Threading.ThreadPool.xml",
+        "ref/netstandard1.3/de/System.Threading.ThreadPool.xml",
+        "ref/netstandard1.3/es/System.Threading.ThreadPool.xml",
+        "ref/netstandard1.3/fr/System.Threading.ThreadPool.xml",
+        "ref/netstandard1.3/it/System.Threading.ThreadPool.xml",
+        "ref/netstandard1.3/ja/System.Threading.ThreadPool.xml",
+        "ref/netstandard1.3/ko/System.Threading.ThreadPool.xml",
+        "ref/netstandard1.3/ru/System.Threading.ThreadPool.xml",
+        "ref/netstandard1.3/zh-hans/System.Threading.ThreadPool.xml",
+        "ref/netstandard1.3/zh-hant/System.Threading.ThreadPool.xml",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.threading.threadpool.4.0.10.nupkg.sha512",
+        "system.threading.threadpool.nuspec"
+      ]
+    },
+    "System.Threading.Timer/4.0.1": {
+      "sha512": "saGfUV8uqVW6LeURiqxcGhZ24PzuRNaUBtbhVeuUAvky1naH395A/1nY0P2bWvrw/BreRtIB/EzTDkGBpqCwEw==",
+      "type": "package",
+      "path": "system.threading.timer/4.0.1",
+      "files": [
+        ".nupkg.metadata",
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net451/_._",
+        "lib/portable-net451+win81+wpa81/_._",
+        "lib/win81/_._",
+        "lib/wpa81/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net451/_._",
+        "ref/netcore50/System.Threading.Timer.dll",
+        "ref/netcore50/System.Threading.Timer.xml",
+        "ref/netcore50/de/System.Threading.Timer.xml",
+        "ref/netcore50/es/System.Threading.Timer.xml",
+        "ref/netcore50/fr/System.Threading.Timer.xml",
+        "ref/netcore50/it/System.Threading.Timer.xml",
+        "ref/netcore50/ja/System.Threading.Timer.xml",
+        "ref/netcore50/ko/System.Threading.Timer.xml",
+        "ref/netcore50/ru/System.Threading.Timer.xml",
+        "ref/netcore50/zh-hans/System.Threading.Timer.xml",
+        "ref/netcore50/zh-hant/System.Threading.Timer.xml",
+        "ref/netstandard1.2/System.Threading.Timer.dll",
+        "ref/netstandard1.2/System.Threading.Timer.xml",
+        "ref/netstandard1.2/de/System.Threading.Timer.xml",
+        "ref/netstandard1.2/es/System.Threading.Timer.xml",
+        "ref/netstandard1.2/fr/System.Threading.Timer.xml",
+        "ref/netstandard1.2/it/System.Threading.Timer.xml",
+        "ref/netstandard1.2/ja/System.Threading.Timer.xml",
+        "ref/netstandard1.2/ko/System.Threading.Timer.xml",
+        "ref/netstandard1.2/ru/System.Threading.Timer.xml",
+        "ref/netstandard1.2/zh-hans/System.Threading.Timer.xml",
+        "ref/netstandard1.2/zh-hant/System.Threading.Timer.xml",
+        "ref/portable-net451+win81+wpa81/_._",
+        "ref/win81/_._",
+        "ref/wpa81/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.threading.timer.4.0.1.nupkg.sha512",
+        "system.threading.timer.nuspec"
+      ]
+    },
+    "System.ValueTuple/4.5.0": {
+      "sha512": "okurQJO6NRE/apDIP23ajJ0hpiNmJ+f0BwOlB/cSqTLQlw5upkf+5+96+iG2Jw40G1fCVCyPz/FhIABUjMR+RQ==",
+      "type": "package",
+      "path": "system.valuetuple/4.5.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net461/System.ValueTuple.dll",
+        "lib/net461/System.ValueTuple.xml",
+        "lib/net47/System.ValueTuple.dll",
+        "lib/net47/System.ValueTuple.xml",
+        "lib/netcoreapp2.0/_._",
         "lib/netstandard1.0/System.ValueTuple.dll",
-        "lib/portable-net40+sl4+win8+wp8/.xml",
+        "lib/netstandard1.0/System.ValueTuple.xml",
+        "lib/netstandard2.0/_._",
         "lib/portable-net40+sl4+win8+wp8/System.ValueTuple.dll",
-        "system.valuetuple.4.3.0.nupkg.sha512",
-        "system.valuetuple.nuspec"
+        "lib/portable-net40+sl4+win8+wp8/System.ValueTuple.xml",
+        "lib/uap10.0.16299/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net461/System.ValueTuple.dll",
+        "ref/net47/System.ValueTuple.dll",
+        "ref/netcoreapp2.0/_._",
+        "ref/netstandard2.0/_._",
+        "ref/portable-net40+sl4+win8+wp8/System.ValueTuple.dll",
+        "ref/uap10.0.16299/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.valuetuple.4.5.0.nupkg.sha512",
+        "system.valuetuple.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
       ]
     },
     "System.Xml.ReaderWriter/4.3.0": {
@@ -12359,11 +13286,12 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.2": [
-      "Consul >= 0.7.2.6",
       "Microsoft.AspNetCore.App >= 2.2.0",
       "Microsoft.AspNetCore.Razor.Design >= 2.2.0",
       "Microsoft.NETCore.App >= 2.2.0",
-      "Ocelot >= 13.5.2"
+      "Ocelot >= 13.5.2",
+      "Ocelot.Provider.Consul >= 13.5.2",
+      "SkyAPM.Agent.AspNetCore >= 0.9.0"
     ]
   },
   "packageFolders": {
@@ -12403,10 +13331,6 @@
     "frameworks": {
       "netcoreapp2.2": {
         "dependencies": {
-          "Consul": {
-            "target": "Package",
-            "version": "[0.7.2.6, )"
-          },
           "Microsoft.AspNetCore.App": {
             "suppressParent": "All",
             "target": "Package",
@@ -12427,6 +13351,14 @@
           "Ocelot": {
             "target": "Package",
             "version": "[13.5.2, )"
+          },
+          "Ocelot.Provider.Consul": {
+            "target": "Package",
+            "version": "[13.5.2, )"
+          },
+          "SkyAPM.Agent.AspNetCore": {
+            "target": "Package",
+            "version": "[0.9.0, )"
           }
         },
         "imports": [

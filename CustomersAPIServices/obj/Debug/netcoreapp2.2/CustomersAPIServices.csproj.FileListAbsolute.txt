@@ -5,11 +5,14 @@ D:\projects\api-gateway\CustomersAPIServices\bin\Debug\netcoreapp2.2\CustomersAP
 D:\projects\api-gateway\CustomersAPIServices\bin\Debug\netcoreapp2.2\CustomersAPIServices.runtimeconfig.dev.json
 D:\projects\api-gateway\CustomersAPIServices\bin\Debug\netcoreapp2.2\CustomersAPIServices.dll
 D:\projects\api-gateway\CustomersAPIServices\bin\Debug\netcoreapp2.2\CustomersAPIServices.pdb
+D:\projects\api-gateway\CustomersAPIServices\bin\Debug\netcoreapp2.2\Shared.dll
+D:\projects\api-gateway\CustomersAPIServices\bin\Debug\netcoreapp2.2\Shared.pdb
 D:\projects\api-gateway\CustomersAPIServices\obj\Debug\netcoreapp2.2\CustomersAPIServices.csprojAssemblyReference.cache
 D:\projects\api-gateway\CustomersAPIServices\obj\Debug\netcoreapp2.2\CustomersAPIServices.RazorAssemblyInfo.cache
 D:\projects\api-gateway\CustomersAPIServices\obj\Debug\netcoreapp2.2\CustomersAPIServices.RazorAssemblyInfo.cs
 D:\projects\api-gateway\CustomersAPIServices\obj\Debug\netcoreapp2.2\CustomersAPIServices.AssemblyInfoInputs.cache
 D:\projects\api-gateway\CustomersAPIServices\obj\Debug\netcoreapp2.2\CustomersAPIServices.AssemblyInfo.cs
 D:\projects\api-gateway\CustomersAPIServices\obj\Debug\netcoreapp2.2\CustomersAPIServices.RazorTargetAssemblyInfo.cache
+D:\projects\api-gateway\CustomersAPIServices\obj\Debug\netcoreapp2.2\CustomersAPIServices.csproj.CopyComplete
 D:\projects\api-gateway\CustomersAPIServices\obj\Debug\netcoreapp2.2\CustomersAPIServices.dll
 D:\projects\api-gateway\CustomersAPIServices\obj\Debug\netcoreapp2.2\CustomersAPIServices.pdb

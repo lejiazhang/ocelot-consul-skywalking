@@ -1,17 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Ocelot.DependencyInjection;
-using Ocelot.Middleware;
-
-namespace APIGateway
+﻿namespace APIGateway
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Threading.Tasks;
+    using Microsoft.AspNetCore.Builder;
+    using Microsoft.AspNetCore.Hosting;
+    using Microsoft.AspNetCore.Http;
+    using Microsoft.Extensions.Configuration;
+    using Microsoft.Extensions.DependencyInjection;
+    using Ocelot.DependencyInjection;
+    using Ocelot.Middleware;
+    using Ocelot.Provider.Consul;
+
     public class Startup
     {
         public Startup(IHostingEnvironment env)
@@ -28,7 +29,8 @@ namespace APIGateway
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddOcelot(Configuration);
+            services.AddOcelot(Configuration)
+                .AddConsul();
         }
 
         public IConfigurationRoot Configuration { get; }
@@ -37,6 +39,7 @@ namespace APIGateway
         public async void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             await app.UseOcelot();
+
         }
     }
 }
